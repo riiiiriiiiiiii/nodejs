@@ -1,10 +1,12 @@
 const express = require('express');
-const path = require('path');
-const router = express.Router();
+const app = express();
+const router = require('./routes/index'); // your current router file
 
-// Serve the index.html file for the root route
-router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../views/index.html'));
+const PORT = process.env.PORT || 8080;
+
+app.use(express.json()); // to parse JSON requests
+app.use('/', router);
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
-
-module.exports = router;
