@@ -34,6 +34,10 @@ app.post('/v1/chat/completions', async (req, res) => {
 app.get('/', (req, res) => {
   res.send('GPT-5.2 Proxy is running!');
 });
+// Temporary test route
+app.get('/test', (req, res) => {
+  res.send('Test route works!');
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
