@@ -1,13 +1,13 @@
 {
   "name": "nodejs-app",
   "version": "1.0.0",
-  "description": "A minimal Node.js web application.",
+  "description": "A minimal Node.js web application for GPT-5.2 proxy",
   "main": "index.js",
   "author": "alphasec",
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2",
-    "cross-fetch": "^3.1.5"
+    "node-fetch": "^3.3.1"
   },
   "scripts": {
     "start": "node index.js"
